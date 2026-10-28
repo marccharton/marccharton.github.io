@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github de marc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Charton · Pages</title>
+  <meta name="description" content="Les sites et projets publiés par Marc Charton sur GitHub Pages.">
+  <meta property="og:title" content="Marc Charton · Pages">
+  <meta property="og:description" content="Les sites et projets publiés par Marc Charton sur GitHub Pages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+  <style>
+    /* Annuaire : une colonne de fiches, une par site publié */
+    :root{
+      --bg:#F3F5F7; --card:#FFFFFF; --ink:#1B2430; --soft:#55606D; --mute:#8590A0;
+      --line:#D9DFE6; --accent:#2E5C8A; --ok:#2F7A5B; --ok-bg:rgba(47,122,91,.1); --soon:#8C6828; --soon-bg:rgba(140,104,40,.1);
+      --f-display:"Literata",Georgia,serif;
+      --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+    }
+    @media (prefers-color-scheme: dark){:root{
+      --bg:#12171D; --card:#19202A; --ink:#E4E9EF; --soft:#A6B0BC; --mute:#7A8594;
+      --line:#2B3542; --accent:#86B2DE; --ok:#7CC7A3; --ok-bg:rgba(124,199,163,.12); --soon:#D9B36A; --soon-bg:rgba(217,179,106,.12); color-scheme:dark}}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-body)}
+    .wrap{max-width:760px;margin:0 auto;padding:56px max(18px,env(safe-area-inset-right)) 72px max(18px,env(safe-area-inset-left))}
+    header{display:flex;flex-direction:column;gap:6px;margin-bottom:36px}
+    .eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+    h1{font:650 40px/1.1 var(--f-display);margin:0;letter-spacing:-.01em}
+    .lede{color:var(--soft);margin:4px 0 0;max-width:56ch}
+    .list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+    .site{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:start}
+    .site h2{font:650 21px/1.25 var(--f-display);margin:0;min-width:0}
+    .site h2 a{color:inherit;text-decoration:none}
+    .site h2 a:hover{color:var(--accent)}
+    .site p{grid-column:1/-1;margin:0;color:var(--soft);max-width:62ch}
+    .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:14px}
+    .meta a{color:var(--accent);text-underline-offset:3px}
+    .meta code{font-size:13px;color:var(--mute)}
+    .chip{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+    .chip.ok{color:var(--ok);background:var(--ok-bg)}
+    .chip.soon{color:var(--soon);background:var(--soon-bg)}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+    footer{margin-top:40px;font-size:14px;color:var(--mute)}
+    footer a{color:inherit}
+    @media (max-width:560px){h1{font-size:32px}.wrap{padding-top:40px}}
+  </style>
 </head>
 <body>
-    <h1> My Github Pages </h1>
+  <div class="wrap">
+    <header>
+      <span class="eyebrow">github.io</span>
+      <h1>Marc Charton · Pages</h1>
+      <p class="lede">Les sites et projets que je publie ici. Chaque dépôt a son adresse : marccharton.github.io/nom-du-dépôt.</p>
+    </header>
+
+    <!-- Pour ajouter un site : copier un bloc <li> et changer le nom, le texte, le dépôt et l'état. -->
+    <ul class="list">
+      <li class="site">
+        <h2><a href="/brief/">Brief citoyen</a></h2>
+        <span class="chip soon">Bientôt</span>
+        <p>Un sujet de politique française chaque matin de semaine, expliqué depuis les bases, avec les arguments des deux côtés et des sources pour creuser.</p>
+        <div class="meta"><code>/brief</code><a href="https://github.com/marccharton/brief">Dépôt</a></div>
+      </li>
+      <li class="site">
+        <h2><a href="/Ghost-Note-Vulga/">Ghost-Note Vulga</a></h2>
+        <span class="chip ok">En ligne</span>
+        <p>Série de vidéos verticales de vulgarisation musicale, générées avec Remotion et Claude Code.</p>
+        <div class="meta"><code>/Ghost-Note-Vulga</code><a href="https://github.com/marccharton/Ghost-Note-Vulga">Dépôt</a></div>
+      </li>
+    </ul>
+
+    <footer>Marc Charton · <a href="https://github.com/marccharton">github.com/marccharton</a></footer>
+  </div>
 </body>
 </html>
